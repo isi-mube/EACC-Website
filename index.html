@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EACC - European Advisory Committee of Cytotechnology</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/mini.png" type="image/png">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="img/logo.png" alt="EFCS Logo">
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#eacc">EACC</a></li>
+                <li><a href="#activities">Congresses</a></li>
+                <li><a href="#webinars">Webinars</a></li>
+                <li><a href="#regulations">Regulations</a></li>
+            </ul>
+        </nav>        
+    </header>
+
+    <main>
+        <section id="home" class="home-section">
+            <!-- Content box -->
+            <div class="intro-container">
+                <h1>Welcome to the European Advisory Committee of Cytotechnology website!</h1>
+                
+                <p class="intro-text">
+                    In Europe, there are about 4000 Cytotechnologists. Without their constant dedicated work, 
+                    the fight against cervical cancer would be impossible.
+                </p>
+                
+                <p class="intro-text">
+                    With this web-based communication tool, we aim to enhance communication between cytotechnological 
+                    delegates from all European countries under the auspices of the <a href="https://www.efcs.eu/" target="_blank">EFCS</a>.                    .
+                </p>
+                
+                <div class="goals-container">
+                    <h3>Goals of the EACC</h3>
+                    <ul class="goals-list">
+                        <li>To serve as a forum for discussion on cytotechnological education and professional issues in Europe.</li>
+                        <li>To formulate guidelines and recommendations aimed at improving cytotechnology standards and harmonizing practices in Europe.</li>
+                        <li>To provide advice and counsel to the European Federation of Cytology Societies (EFCS).</li>
+                        <li>For more information, please check the <a href="#regulations">EACC Regulations</a>.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="eventCarousel" class="carousel-container">
+                <div class="carousel-slide" style="background-image: url('img/poland.jpeg');">
+                    <div class="carousel-content">
+                        <h2>15th Annual EFCS Tutorial</h2>
+                        <p>September 23-27, 2024 - Lower Silesian Chamber of Physicians</p>
+                        <p>This EFCS event has been accredited with 31.5 European CME credits.</p>
+                        <a href="https://www.efcs.eu/the-15th-efcs-annual-tutorial/" class="carousel-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="background-image: url('img/florence.jpg');">
+                    <div class="carousel-content">
+                        <h2>ICC Florence 2025</h2>
+                        <p>May 15-20, 2025 - Florence, Italy</p>
+                        <p>The largest congress dedicated to cytology and medical advancements.</p>
+                        <a href="https://www.iccflorence2025.com/" class="carousel-btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>     
+
+        <section id="eacc" class="eacc-section">        
+            <div class="intro-container">
+                <h1>The European Advisory Committee of Cytotechnology (EACC)</h1>
+                <p class="intro-text">
+                    The EACC Advisory Committee is a body composed of cytotechnologists from different European countries, reporting to the EFCS. The advisory committee addresses educational and professional issues relating to cytotechnologists in Europe, working to improve standards in the profession.
+                </p>
+            </div>
+            <div class="composition-container">
+                <h3>Composition of the EACC</h3>
+                <p>The EACC is composed of members from various European countries:</p>
+            </div>
+            
+            <div class="committee-structure">
+                <!-- First row: Chairperson and Secretary -->
+                <div class="first-row">
+                    <!-- Chairperson -->
+                    <div class="committee-member">
+                        <figure>
+                            <img src="https://www.efcs.eu/wp-content/uploads/2019/06/Lia-150x150.jpg" alt="Ms. Lia van Zuylen-Manders" class="avatar">
+                        </figure>
+                        <div class="member-info">
+                            <h4>Ms. Lia van Zuylen-Manders</h4>
+                            <p><strong>Chairperson</strong></p>
+                            <p>The Netherlands</p>
+                            <p>Radboudumc, Pathology</p>
+                            <button class="email-button" onclick="revealEmail('email-lia')">Email</button>
+                            <p id="email-lia" class="hidden-email">lia.vanzuylen-manders@radboudumc.nl</p>
+                            <p>Tel: 0031615446082</p>
+                            <p><a href="http://www.nmvl.nl">www.nmvl.nl</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Secretary -->
+                    <div class="committee-member">
+                        <figure>
+                            <img src="https://www.efcs.eu/wp-content/uploads/2024/05/isidre.png" alt="Mr. Isidre Munné-Bertran" class="avatar">
+                        </figure>
+                        <div class="member-info">
+                            <h4>Mr. Isidre Munné-Bertran</h4>
+                            <p><strong>Secretary</strong></p>
+                            <p>Spain</p>
+                            <p>Universal DX, Calle del Monte Esquinza 30, 28010 Madrid</p>
+                            <button class="email-button" onclick="revealEmail('email-isidre')">Email</button>
+                            <p id="email-isidre" class="hidden-email">isi.mube@protonmail.com</p>
+                            <p>Tel: +34 638010081</p>
+                            <p><a href="https://secitologia.org/">https://secitologia.org/</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second row: Other members -->
+                <div class="second-row">
+                    <!-- Veronika -->
+                    <div class="committee-member">
+                        <figure>
+                            <img src="https://www.efcs.eu/wp-content/uploads/2019/06/veronika-150x150.jpg" alt="Ms. Veronika Anic Paradis" class="avatar">
+                        </figure>
+                        <div class="member-info">
+                            <h4>Ms. Veronika Anic Paradis</h4>
+                            <p><strong>Committee Member</strong></p>
+                            <p>Croatia</p>
+                            <p>Department of Clinical Cytology and Cytogenetics, Clinical Hospital "Merkur"</p>
+                            <button class="email-button" onclick="revealEmail('email-veronika')">Email</button>
+                            <p id="email-veronika" class="hidden-email">veronika.anic1@gmail.com</p>
+                            <p>Tel: 0038512253235</p>
+                            <p><a href="http://www.hucit.hr">www.hucit.hr</a></p>
+                        </div>
+                    </div>                    
+                    <!-- Elisabeth Fedl -->
+                    <div class="committee-member">
+                        <figure>
+                            <img src="https://www.efcs.eu/wp-content/uploads/2024/02/elisabeth-201x300.jpg" alt="Ms. Elisabeth Fedl" class="avatar">
+                        </figure>
+                        <div class="member-info">
+                            <h4>Ms. Elisabeth Fedl</h4>
+                            <p><strong>Committee Member</strong></p>
+                            <p>Austria</p>
+                            <p>LKH-Univ. Klinikum Graz</p>
+                            <button class="email-button" onclick="revealEmail('email-elisabeth')">Email</button>
+                            <p id="email-elisabeth" class="hidden-email">elisabeth.fedl@uniklinikum-kages.at</p>
+                            <p>Tel: 0043 316 385 83958</p>
+                            <p><a href="https://www.cytology.at">www.cytology.at</a></p>
+                        </div>
+                    </div>
+                    <!-- Celine Degaillier -->
+                    <div class="committee-member">
+                        <figure>
+                            <img src="https://www.efcs.eu/wp-content/uploads/2024/02/celine-265x300.png" alt="Ms. Céline Degaillier" class="avatar">
+                        </figure>
+                        <div class="member-info">
+                            <h4>Ms. Céline Degaillier</h4>
+                            <p><strong>Committee Member</strong></p>
+                            <p>Belgium</p>
+                            <p>UZ Brussel, Pathology Department</p>
+                            <button class="email-button" onclick="revealEmail('email-celine')">Email</button>
+                            <p id="email-celine" class="hidden-email">celine.degaillier@uzbrussel.be</p>
+                            <p>Tel: 0032 2 474 94 08</p>
+                            <p><a href="http://www.belgian-society-pathology.eu/">www.belgian-society-pathology.eu</a></p>
+                        </div>
+                    </div>
+                    <!-- Henriette Nielsen -->
+                    <div class="committee-member">
+                        <figure>
+                            <img src="https://www.efcs.eu/wp-content/uploads/2023/10/henriette.png" alt="Ms. Henriette O.B. Nielsen" class="avatar">
+                        </figure>
+                        <div class="member-info">
+                            <h4>Ms. Henriette O.B. Nielsen</h4>
+                            <p><strong>Committee Member</strong></p>
+                            <p>Denmark</p>
+                            <p>Sygehus Lillebælt, Vejle</p>
+                            <button class="email-button" onclick="revealEmail('email-henriette')">Email</button>
+                            <p id="email-henriette" class="hidden-email">Henriette.O.B.Nielsen@rsyd.dk</p>
+                            <p>Tel: 0045 79406574</p>
+                            <p><a href="http://www.danskcytologiforening.dk/">www.danskcytologiforening.dk</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="third-row">
+                    <!-- Sakina Slimani -->
+                    <div class="committee-member">
+                        <figure>
+                            <img src="https://www.efcs.eu/wp-content/uploads/2023/10/sakina.png" alt="Ms. Sakina Slimani" class="avatar">
+                        </figure>
+                        <div class="member-info">
+                            <h4>Ms. Sakina Slimani</h4>
+                            <p><strong>Committee Member</strong></p>
+                            <p>France</p>
+                            <p>Unilabs-Praxea, 1 rue Galvani, 91300 Massay</p>
+                            <button class="email-button" onclick="revealEmail('email-sakina')">Email</button>
+                            <p id="email-sakina" class="hidden-email">Issaad_sakina@hotmail.com</p>
+                            <p>Tel: 0033 661233401</p>
+                            <p><a href="https://francesfcc.org">francesfcc.org</a></p>
+                        </div>
+                    </div>
+                    <!-- Eeva Liikanen -->
+                    <div class="committee-member">
+                        <figure>
+                            <img src="https://www.efcs.eu/wp-content/uploads/2021/10/eva.jpg" alt="Ms. Eeva Liikanen" class="avatar">
+                        </figure>
+                        <div class="member-info">
+                            <h4>Ms. Eeva Liikanen</h4>
+                            <p><strong>Committee Member</strong></p>
+                            <p>Finland</p>
+                            <p>Biomedical Laboratory Science to Applied Research Center, Tampere</p>
+                            <button class="email-button" onclick="revealEmail('email-eeva')">Email</button>
+                            <p id="email-eeva" class="hidden-email">eeva.liikanen@tuni.fi</p>
+                            <p>Tel: 00358 05 563 0046</p>
+                            <p><a href="http://www.sytologiassistentit.fi">www.sytologiassistentit.fi</a></p>
+                        </div>
+                    </div>
+                    <!-- Frederika Keitz -->
+                    <div class="committee-member">
+                        <figure>
+                            <img src="https://www.efcs.eu/wp-content/uploads/2022/11/heitz-edited.jpg" alt="Ms. Frederika Keitz" class="avatar">
+                        </figure>
+                        <div class="member-info">
+                            <h4>Ms. Frederika Keitz</h4>
+                            <p><strong>Committee Member</strong></p>
+                            <p>Germany</p>
+                            <p>IPNL Pathologie-Zytologie, Bergmannstrasse 42, 26789 Leer</p>
+                            <button class="email-button" onclick="revealEmail('email-frederika')">Email</button>
+                            <p id="email-frederika" class="hidden-email">f.keitz@pathologie-zytologie.de</p>
+                            <p>Tel: 00494919899310</p>
+                            <p>Mobile: 004915151651303</p>
+                            <p><a href="http://www.vdca.nl">www.vdca.nl</a></p>
+                        </div>
+                    </div>
+                    <!-- Enrica Bresaola -->
+                    <div class="committee-member">
+                        <figure>
+                            <img src="https://www.efcs.eu/wp-content/uploads/2021/10/bresaola.jpg" alt="Ms. Enrica Bresaola" class="avatar">
+                        </figure>
+                        <div class="member-info">
+                            <h4>Ms. Enrica Bresaola</h4>
+                            <p><strong>Committee Member</strong></p>
+                            <p>Italy</p>
+                            <p>European Institute of Oncology, via Ripamonti 435, 20135 Milan</p>
+                            <button class="email-button" onclick="revealEmail('email-enrica')">Email</button>
+                            <p id="email-enrica" class="hidden-email">enrica.bresaola@gmail.com</p>
+                            <p>Tel: 0039 3403133837</p>
+                            <p><a href="http://www.ieo.it">www.ieo.it</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fourth-row">
+                    <!-- Mette Kristin Pedersen -->
+                    <div class="committee-member">
+                        <figure>
+                            <img src="https://www.efcs.eu/wp-content/uploads/2018/09/efcs-150x150.jpg" alt="Ms. Mette Kristin Pedersen" class="avatar">
+                        </figure>
+                        <div class="member-info">
+                            <h4>Ms. Mette Kristin Pedersen</h4>
+                            <p><strong>Committee Member</strong></p>
+                            <p>Norway</p>
+                            <p>Akershus University Hospital, Cytology, 1478 Lørenskog</p>
+                            <button class="email-button" onclick="revealEmail('email-mette')">Email</button>
+                            <p id="email-mette" class="hidden-email">mette.kristin.pedersen@ahus.no</p>
+                            <p>Tel: 0047 67960000</p>
+                        </div>
+                    </div>
+                    <!-- Ruben Roque -->
+                    <div class="committee-member">
+                        <figure>
+                            <img src="https://www.efcs.eu/wp-content/uploads/2023/10/ruben.jpg" alt="Mr. Ruben Roque" class="avatar">
+                        </figure>
+                        <div class="member-info">
+                            <h4>Mr. Ruben Roque</h4>
+                            <p><strong>Committee Member</strong></p>
+                            <p>Portugal</p>
+                            <p>Pathology Department, Instituto Português de Oncologia de Lisboa Francisco Gentil</p>
+                            <button class="email-button" onclick="revealEmail('email-ruben')">Email</button>
+                            <p id="email-ruben" class="hidden-email">rroque@ipolisboa.min-saude.pt</p>
+                            <p>Tel: 0035 1217229831</p>
+                            <p><a href="http://www.spcitologia.org/">www.spcitologia.org</a></p>
+                        </div>
+                    </div>
+                    <!-- Irena Srebotnik Kirbis -->
+                    <div class="committee-member">
+                        <figure>
+                            <img src="https://www.efcs.eu/wp-content/uploads/2012/11/EACC_13-150x150.jpg" alt="Ms. Irena Srebotnik Kirbis" class="avatar">
+                        </figure>
+                        <div class="member-info">
+                            <h4>Ms. Irena Srebotnik Kirbis</h4>
+                            <p><strong>Committee Member</strong></p>
+                            <p>Slovenia</p>
+                            <p>Institute of Pathology, Medical Faculty, University of Ljubljana</p>
+                            <button class="email-button" onclick="revealEmail('email-irena')">Email</button>
+                            <p id="email-irena" class="hidden-email">irena.srebotnik-kirbis@mf.uni-lj.si</p>
+                            <p>Tel: 00 38615437117</p>
+                            <p><a href="https://www.szd.si/sekcije-in-zdruzenja/patologija-in-sodna-medicina/sekcija-za-citopatologijo/">www.szd.si</a></p>
+                        </div>
+                    </div>
+                    <!-- Paula Warnhag -->
+                    <div class="committee-member">
+                        <figure>
+                            <img src="https://www.efcs.eu/wp-content/uploads/2018/05/paula-150x150.jpg" alt="Ms. Paula Warnhag" class="avatar">
+                        </figure>
+                        <div class="member-info">
+                            <h4>Ms. Paula Warnhag</h4>
+                            <p><strong>Committee Member</strong></p>
+                            <p>Sweden</p>
+                            <p>Labmedicin, Department of Clinical Genetics and Pathology, Lund</p>
+                            <button class="email-button" onclick="revealEmail('email-paula')">Email</button>
+                            <p id="email-paula" class="hidden-email">paula.warnhag@skane.se</p>
+                            <p>Tel: +4640337385</p>
+                            <p><a href="http://www.cytodiagnostiker.se">www.cytodiagnostiker.se</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fifth-row">
+                    <!-- Graziella Baston -->
+                    <div class="committee-member">
+                        <figure>
+                            <img src="https://www.efcs.eu/wp-content/uploads/2021/10/G.Baston-1024x729.jpg" alt="Ms. Graziella Baston" class="avatar">
+                        </figure>
+                        <div class="member-info">
+                            <h4>Ms. Graziella Baston</h4>
+                            <p><strong>Committee Member</strong></p>
+                            <p>Switzerland</p>
+                            <p>Aarau Cantonal Hospital, Tellstrasse 25, CH-5001 Aarau</p>
+                            <button class="email-button" onclick="revealEmail('email-graziella')">Email</button>
+                            <p id="email-graziella" class="hidden-email">graziella.baston@ksa.ch</p>
+                            <p>Tel: +41628386107</p>
+                            <p><a href="http://www.cytology.ch">www.cytology.ch</a></p>
+                        </div>
+                    </div>
+                    <!-- Allan Wilson -->
+                    <div class="committee-member">
+                        <figure>
+                            <img src="https://www.efcs.eu/wp-content/uploads/2018/10/Wilson-Allan-150x150.jpg" alt="Mr. Allan Wilson" class="avatar">
+                        </figure>
+                        <div class="member-info">
+                            <h4>Mr. Allan Wilson</h4>
+                            <p><strong>Committee Member</strong></p>
+                            <p>United Kingdom</p>
+                            <p>Pathology Dept, Monklands Hospital, Monkscourt Avenue, Airdrie</p>
+                            <button class="email-button" onclick="revealEmail('email-allan')">Email</button>
+                            <p id="email-allan" class="hidden-email">allan.wilson@lanarkshire.scot.nhs.uk</p>
+                            <p>Tel: 01236 712087</p>
+                            <p><a href="http://www.britishcytology.org.uk">www.britishcytology.org.uk</a></p>
+                        </div>
+                    </div>
+                    <!-- Miriam Castella I Rufat -->
+                    <div class="committee-member">
+                        <figure>
+                            <img src="https://www.efcs.eu/wp-content/uploads/2021/10/rufat.png" alt="Ms. Miriam Castella I Rufat" class="avatar">
+                        </figure>
+                        <div class="member-info">
+                            <h4>Ms. Miriam Castella I Rufat</h4>
+                            <p><strong>Committee Member</strong></p>
+                            <p>Spain</p>
+                            <p>Salud de la Mujer Dexeus, Cytology Department, Gran Via Carlos III, 71-75, 08028 Barcelona</p>
+                            <button class="email-button" onclick="revealEmail('email-miriam')">Email</button>
+                            <p id="email-miriam" class="hidden-email">castella.miriam@gmail.com</p>
+                            <p>Tel: 0034629264055</p>
+                            <p><a href="http://www.secitologia.org">www.secitologia.org</a></p>
+                        </div>
+                    </div>
+                    <!-- Linda Dockalova -->
+                    <div class="committee-member">
+                        <figure>
+                            <img src="https://www.efcs.eu/wp-content/uploads/2022/11/linda.jpg" alt="Ms. Linda Dockalova" class="avatar">
+                        </figure>
+                        <div class="member-info">
+                            <h4>Ms. Linda Dockalova</h4>
+                            <p><strong>Committee Member</strong></p>
+                            <p>Czech Republic</p>
+                            <p>CGOP, s.r.o., Prague 2, Vocelova 603/5, Czech Republic</p>
+                            <button class="email-button" onclick="revealEmail('email-linda')">Email</button>
+                            <p id="email-linda" class="hidden-email">dockalova-linda@seznam.cz</p>
+                            <p>Tel: + 420 777 751 711</p>
+                            <p><a href="http://www.cyt.cz">www.cyt.cz</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="activities" class="activities-section">
+            <p>This is the Congresses/Activities Section.</p>
+        </section>
+
+        <section id="webinars" class="webinars-section">
+            <p>This is the Webinars Section.</p>
+        </section>
+
+        <section id="regulations" class="regulations-section">
+            <p>This is the Regulations Section.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>EACC All rights reserved</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

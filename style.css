@@ -1,0 +1,295 @@
+/* General resets and global styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%; 
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Header and Navigation */
+
+/* Header logo size modification */
+.header-logo {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.main-header {
+    background-color: #004080;
+    padding: 2.5rem 0;
+    text-align: center;
+}
+
+.logo-container img {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #80dfff;
+    transform: scale(1.1);
+}
+
+/* Main and Sections */
+main {
+    padding: 2rem;
+    flex: 1;
+}
+
+section {
+    padding: 50px;
+    min-height: 100vh;
+    background-color: transparent;
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* EACC Section */
+.eacc-section {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Committee Structure */
+.committee-structure {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.committee-structure .first-row, .second-row, .third-row, .fourth-row, .fifth-row {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.committee-member {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    width: 300px;
+    flex: 1;
+}
+
+.committee-member figure {
+    margin: 0 auto 1rem;
+}
+
+.committee-member .avatar {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.member-info h4 {
+    margin: 0.5rem 0;
+    color: #004080;
+}
+
+.member-info p {
+    margin: 0.25rem 0;
+}
+
+.member-info a {
+    color: #004080;
+    text-decoration: none;
+}
+
+.member-info a:hover {
+    text-decoration: underline;
+}
+
+/* Button for Email Reveal */
+.email-button {
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.email-button:hover {
+    background-color: #80dfff;
+}
+
+.hidden-email {
+    display: none;
+}
+
+/* Footer */
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* EACC Section Intro Styling */
+.intro-container {
+    background-color: #e6f2ff;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: #004080;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.goals-container {
+    margin-bottom: 2rem;
+}
+
+.goals-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #004080;
+}
+
+.composition-container {
+    margin-bottom: 2rem;
+}
+
+.composition-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #004080;
+}
+
+/* Carousel Home Section */
+.carousel-container {
+    position: relative;
+    width: 100%; 
+    height: 50vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease-in-out;
+    display: none;
+}
+
+.carousel-slide.active {
+    display: block;
+    opacity: 1;
+}
+
+.carousel-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.carousel-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.carousel-content p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.carousel-btn {
+    background-color: #004080;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: #80dfff;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
