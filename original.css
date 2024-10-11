@@ -1,0 +1,196 @@
+/* General resets and global styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Header and Navigation */
+.main-header {
+    background-color: #004080;
+    padding: 2.5rem 0;
+    text-align: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #80dfff;
+    transform: scale(1.1);
+}
+
+/* Main and Sections */
+main {
+    padding: 2rem;
+    flex: 1;
+}
+
+section {
+    padding: 50px;
+    min-height: 100vh;
+    background-color: transparent;
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* EACC Section */
+.eacc-section {
+    padding: 3rem 2rem;
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+    position: relative;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* Remove unnecessary double background */
+.eacc-section::before {
+    content: none;
+}
+
+/* Committee Structure */
+.committee-structure {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center; /* Centered to avoid uneven columns */
+    margin-top: 2rem;
+}
+
+/* First row: two members in one row */
+.committee-structure .first-row .committee-member {
+    flex: 1 1 45%; /* Make them take up almost half the width each */
+}
+
+/* For all following rows: four members per row */
+.committee-structure .committee-member {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    flex: 1 1 calc(20% - 2rem); /* Each member takes 25% width minus the gap */
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+/* Avatar image styling */
+.committee-member figure {
+    margin: 0 auto 1rem;
+}
+
+.committee-member .avatar {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.member-info h4 {
+    margin: 0.5rem 0;
+    color: #004080;
+    font-size: 1.3rem;
+}
+
+.member-info p {
+    margin: 0.25rem 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.member-info a {
+    color: #004080;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.member-info a:hover {
+    text-decoration: underline;
+}
+
+/* Email button */
+.email-button {
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.email-button:hover {
+    background-color: #80dfff;
+}
+
+.hidden-email {
+    display: none;
+    font-size: 0.9rem;
+    color: #004080;
+}
+
+.intro-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: #004080;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* Footer styling */
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    font-size: 1rem;
+    position: relative;
+    width: 100%;
+}
+
+/* Navbar fixes */
+.navbar-nav .nav-link {
+    color: #e6f2ff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #80dfff;
+    border-radius: 5px;
+    transform: translateY(-3px);
+}

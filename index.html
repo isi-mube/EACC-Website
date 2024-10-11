@@ -4,40 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EACC - European Advisory Committee of Cytotechnology</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/mini.png" type="image/png">
+
 </head>
 <body>
+
+    <!-- Header -->
     <header class="main-header">
         <div class="logo-container">
-            <img src="img/logo.png" alt="EFCS Logo">
+            <img src="img/logo.png" alt="Logo" class="header-logo">
         </div>
+
+        <!-- Hamburger menu button for mobile -->
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+        <!-- Navigation menu -->
         <nav class="main-nav">
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#eacc">EACC</a></li>
-                <li><a href="#activities">Congresses</a></li>
-                <li><a href="#webinars">Webinars</a></li>
+                <li><a href="#eacc">About EACC</a></li>
                 <li><a href="#regulations">Regulations</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#webinars">Webinars</a></li>
             </ul>
-        </nav>        
+        </nav>
     </header>
 
     <main>
         <section id="home" class="home-section">
+            <div id="eventCarousel" class="carousel-container">
+                <!-- Previous button -->
+                <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+        
+                <!-- First slide -->
+                <div class="carousel-slide" style="background-image: url('img/poland.jpeg');">
+                    <div class="carousel-content">
+                        <h2>15th Annual EFCS Tutorial</h2>
+                        <p>September 23-27, 2024 - Lower Silesian Chamber of Physicians</p>
+                        <p>This EFCS event has been accredited with 31.5 European CME credits.</p>
+                        <a href="https://www.efcs.eu/the-15th-efcs-annual-tutorial/" class="carousel-btn">Read More</a>
+                    </div>
+                </div>
+        
+                <!-- Second slide -->
+                <div class="carousel-slide" style="background-image: url('img/florence.jpg');">
+                    <div class="carousel-content">
+                        <h2>ICC Florence 2025</h2>
+                        <p>May 15-20, 2025 - Florence, Italy</p>
+                        <p>The largest congress dedicated to cytology and medical advancements.</p>
+                        <a href="https://www.iccflorence2025.com/" class="carousel-btn">Read More</a>
+                    </div>
+                </div>
+        
+                <!-- Next button -->
+                <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
             <!-- Content box -->
             <div class="intro-container">
                 <h1>Welcome to the European Advisory Committee of Cytotechnology website!</h1>
-                
                 <p class="intro-text">
-                    In Europe, there are about 4000 Cytotechnologists. Without their constant dedicated work, 
-                    the fight against cervical cancer would be impossible.
-                </p>
-                
-                <p class="intro-text">
-                    With this web-based communication tool, we aim to enhance communication between cytotechnological 
-                    delegates from all European countries under the auspices of the <a href="https://www.efcs.eu/" target="_blank">EFCS</a>.                    .
+                    In Europe, there are about 4000 Cytotechnologists. Without their constant dedicated work, the fight against cervical cancer would be impossible.
+                    With this website, we aim to enhance communication between cytotechnological delegates from all European countries under the auspices of the <a href="https://www.efcs.eu/" target="_blank">EFCS</a>.                    .
                 </p>
                 
                 <div class="goals-container">
@@ -50,26 +78,7 @@
                     </ul>
                 </div>
             </div>
-
-            <div id="eventCarousel" class="carousel-container">
-                <div class="carousel-slide" style="background-image: url('img/poland.jpeg');">
-                    <div class="carousel-content">
-                        <h2>15th Annual EFCS Tutorial</h2>
-                        <p>September 23-27, 2024 - Lower Silesian Chamber of Physicians</p>
-                        <p>This EFCS event has been accredited with 31.5 European CME credits.</p>
-                        <a href="https://www.efcs.eu/the-15th-efcs-annual-tutorial/" class="carousel-btn">Read More</a>
-                    </div>
-                </div>
-                <div class="carousel-slide" style="background-image: url('img/florence.jpg');">
-                    <div class="carousel-content">
-                        <h2>ICC Florence 2025</h2>
-                        <p>May 15-20, 2025 - Florence, Italy</p>
-                        <p>The largest congress dedicated to cytology and medical advancements.</p>
-                        <a href="https://www.iccflorence2025.com/" class="carousel-btn">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </section>     
+        </section>        
 
         <section id="eacc" class="eacc-section">        
             <div class="intro-container">
@@ -112,7 +121,7 @@
                             <h4>Mr. Isidre Munné-Bertran</h4>
                             <p><strong>Secretary</strong></p>
                             <p>Spain</p>
-                            <p>Universal DX, Calle del Monte Esquinza 30, 28010 Madrid</p>
+                            <p>Ironhack, Storkower Str. 132, 10407 Berlin, Germany</p>
                             <button class="email-button" onclick="revealEmail('email-isidre')">Email</button>
                             <p id="email-isidre" class="hidden-email">isi.mube@protonmail.com</p>
                             <p>Tel: +34 638010081</p>
@@ -397,9 +406,96 @@
             <p>This is the Webinars Section.</p>
         </section>
 
-        <section id="regulations" class="regulations-section">
-            <p>This is the Regulations Section.</p>
-        </section>
+        <section id="regulations" class="eacc-regulations-section">
+            <!-- Placeholder for logo -->
+            <div class="logo-placeholder" style="text-align: center; margin-bottom: 20px;">
+                <img src="img/EACC_Logo.jpeg" alt="EACC Logo" style="max-width: 500px;">
+            </div>
+        
+            <!-- Regulations Content -->
+            <h2 style="text-align: center;"><strong>REGULATIONS</strong></h2>
+            <h3 style="text-align: center;"><strong>OF THE EUROPEAN ADVISORY COMMITTEE OF CYTOTECHNOLOGY (EACC) OF THE EUROPEAN FEDERATION OF CYTOLOGY SOCIETIES (EFCS)</strong></h3>
+            
+            <p>The EACC’s aims and activities include all subjects concerning the Cytotechnologist (CT) profession.</p>
+        
+            <p><strong>The committee is composed of Members, Chairperson, and Secretary.</strong></p>
+        
+            <p>EACC is responsible for the European Special Session for Cytotechnologists to be organized and held during the European Congress of Cytology in co-operation with the host country.</p>
+        
+            <p>The Annual EACC meeting takes place at every European Congress of Cytology.</p>
+        
+            <p><strong>At least half of the members must be present</strong> or represented at the meeting in order to make voting, decisions, or changes. Members, Chairperson, and Secretary have a right to vote.</p>
+        
+            <p>A non-member can attend the meeting only if approval is given by the Chairperson and the Secretary of EACC. If the Member is represented by a non-member, that person does not have the right to vote.</p>
+        
+            <p><strong>Decisions are taken by a simple majority of the votes.</strong> In the event of an equality of votes, the Chairperson or the one who chairs the meeting will have the casting vote.</p>
+        
+            <h3><strong>Membership</strong></h3>
+            <p>Membership in the EACC is by National Society, not by individual. Members are nominated to sit in the EACC by the National Cytotechnology/Cytology Society in their home country; preferably one per European country. If more than one National Society exists in the country, it is possible that each Society has a member in EACC.</p>
+        
+            <h3><strong>Request for Admission</strong></h3>
+            <p>A request for admission of a National Cytotechnology/Cytology Society representative for membership shall be submitted to the Chairperson and Secretary of the EACC, accompanied with a recommendation letter from the Chairperson or Secretary of the National Cytotechnology/Cytology Society that contains the following personal data of the proposed member/representative:</p>
+            <ul>
+                <li>Name, surname, institution, and address of employment</li>
+                <li>Contact telephone number, e-mail address</li>
+                <li>Full name and website of the National Society which the mentioned person represents</li>
+            </ul>
+        
+            <p>An EACC member should meet the following requirements:</p>
+            <ul>
+                <li>Must be a member and elected representative of the National Cytotechnology/Cytology Society represented in the EACC</li>
+                <li>Should preferably serve for at least 4 years with the possibility of extending the membership</li>
+                <li>A retiring member is succeeded by a Cytotechnologist elected in his/her country</li>
+                <li>Live and work in a country that the member represents</li>
+                <li>Be reasonably fluent in written and oral English</li>
+                <li>Be a highly qualified Cytotechnologist with experience in the Cytotechnology profession</li>
+                <li>Be familiar with the national situation related to Cytotechnology, e.g. education, certification and status, tasks and responsibilities, salaries, continuing education, etc.</li>
+                <li>Should have experience at a managerial level (i.e. chief CT, member of a professional board, teacher…)</li>
+                <li>Be in a position to attend European Cytology Congresses, participate at the Annual EACC meeting and the Special Session for Cytotechnologists</li>
+                <li>To actively participate in the Special Session for Cytotechnologists</li>
+                <li>To suggest subjects and actively participate in discussions at the EACC meetings</li>
+                <li>To invite Cytotechnologists from his/her own country to actively contribute to the Special Session for Cytotechnologists</li>
+                <li>Notify the Secretary on any changes in personal and National Society data</li>
+            </ul>
+        
+            <h3><strong>Chairperson of the EACC</strong></h3>
+            <p>The Chairperson must have been a Secretary of the EACC for at least one mandate before carrying out the mandate of Chairperson. The Chairperson should preferably serve for at least 4 years, with the possibility of re-election.</p>
+        
+            <h4><strong>Responsibilities:</strong></h4>
+            <ul>
+                <li>With commitment and active work, contribute to the reputation, position, and progress of EACC</li>
+                <li>Officially represent EACC, cooperate with other professional organizations/societies together with the EACC Secretary on behalf of the EACC</li>
+                <li>Chair the Annual EACC Meeting (in case of inability to attend, the Secretary chairs)</li>
+                <li>Suggest, prepare, and approve the Agenda for the EACC Meeting together with the EACC Secretary</li>
+                <li>Invite the Secretary General of the EFCS to the Annual Meeting, together with the Secretary of the EACC</li>
+                <li>Chair the Special Session for Cytotechnologists at the European Congress of Cytology and choose/invite a co-chair</li>
+                <li>Arrange, invite, and select lecturers for the Special Session for Cytotechnologists together with the Secretary</li>
+                <li>Approve all EACC documents and material for publication on the EACC website</li>
+                <li>Approve requests for membership of new members in the EACC together with the Secretary</li>
+                <li>Request renewal for Advisory Member position in the EFCS together with the newly elected Secretary</li>
+            </ul>
+        
+            <h3><strong>Secretary of the EACC</strong></h3>
+            <p>The Secretary must be a member of the EACC for at least 4 years and elected by the EACC members. The Secretary should preferably serve for 4 years with the possibility of re-election. When the Chairperson retires, the Secretary automatically replaces the Chairperson.</p>
+        
+            <h4><strong>Responsibilities:</strong></h4>
+            <ul>
+                <li>With commitment and active work, contribute to the reputation, position, and progress of EACC</li>
+                <li>Officially represent EACC together with the Chairperson and cooperate with other professional organizations/societies on behalf of the EACC</li>
+                <li>Consider and approve requests for membership of new members together with the Chairperson</li>
+                <li>Update the EACC member list and take care of EACC documents</li>
+                <li>Organize the venue, time, and other needs for the Annual Meeting</li>
+                <li>Collaborate with the Chairperson to draw up and distribute the Agenda for the Annual EACC Meeting</li>
+                <li>Send the Minutes of the meeting to the EACC members within 2 months after approval by the Chairperson</li>
+                <li>Send a copy of the Minutes to the Secretary of the EFCS</li>
+                <li>Organize the Special Session for Cytotechnologists at the European Congress of Cytology together with the Chairperson and EACC members</li>
+                <li>Request renewal for Advisory Member position in the EFCS together with the newly elected Chairperson</li>
+            </ul>
+        
+            <p><strong>Chairperson:</strong> Veronika Anic Paradis<br>
+            <strong>Secretary:</strong> Lia van Zuylen-Manders<br>
+            <strong>Date:</strong> 5/5/2019</p>
+        </section>        
     </main>
 
     <footer>
