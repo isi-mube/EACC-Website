@@ -17,6 +17,7 @@ The **European Advisory Committee of Cytotechnology (EACC)** aims to support and
 
 - **Home**
 - **EACC Committee Members**
+- **EACC Regulations**
 
 ## In Development
 - Current Activities

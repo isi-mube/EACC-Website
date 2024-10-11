@@ -13,24 +13,20 @@ html, body {
 }
 
 /* Header and Navigation */
-
-/* Header logo size modification */
-.header-logo {
-    max-width: 300px;
-    height: auto;
-    margin-bottom: 1rem;
-}
-
 .main-header {
-    background-color: #004080;
-    padding: 2.5rem 0;
+    background: linear-gradient(45deg, #003366, #0066cc);
+    padding: 1.5rem 0;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 .logo-container img {
-    max-width: 300px;
+    max-width: 450px;
     height: auto;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .main-nav ul {
@@ -38,22 +34,90 @@ html, body {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    padding: 0;
+    margin: 0;
 }
 
 .main-nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    position: relative;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .main-nav ul li a:hover {
     color: #80dfff;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-/* Main and Sections */
+/* Underline animation on hover */
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #80dfff;
+    left: 50%;
+    bottom: -5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.main-nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Responsive Menu - Hamburger for Mobile */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    padding: 0.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    z-index: 1010;
+}
+
+@media (max-width: 768px) {
+    .main-nav ul {
+        flex-direction: column;
+        display: none;
+        background: #004080;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+
+@media (max-width: 768px) {
+    .carousel-content h2 {
+        font-size: 2em;
+    }
+    
+    .carousel-content p {
+        font-size: 1.2em;
+    }
+}
+
+    .main-nav ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .logo-container img {
+        max-width: 200px;
+    }
+}
+
+/* Main content sections */
 main {
     padding: 2rem;
     flex: 1;
@@ -67,7 +131,22 @@ section {
     width: 80%;
 }
 
-/* EACC Section */
+/* --- EACC Section --- */
+.intro-container {
+    background-color: #e6f2ff;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: #004080;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
 .eacc-section {
     padding: 2rem;
     background-color: #f9f9f9;
@@ -75,7 +154,6 @@ section {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Committee Structure */
 .committee-structure {
     display: flex;
     flex-wrap: wrap;
@@ -129,7 +207,6 @@ section {
     text-decoration: underline;
 }
 
-/* Button for Email Reveal */
 .email-button {
     background-color: #004080;
     color: white;
@@ -148,68 +225,13 @@ section {
     display: none;
 }
 
-/* Footer */
-footer {
-    background-color: #004080;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Smooth scrolling for anchor links */
-html {
-    scroll-behavior: smooth;
-}
-
-/* EACC Section Intro Styling */
-.intro-container {
-    background-color: #e6f2ff;
-    padding: 2rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.intro-text {
-    font-size: 1.1rem;
-    color: #004080;
-    line-height: 1.8;
-    margin-bottom: 1rem;
-}
-
-.goals-container {
-    margin-bottom: 2rem;
-}
-
-.goals-list {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    margin-bottom: 2rem;
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #004080;
-}
-
-.composition-container {
-    margin-bottom: 2rem;
-}
-
-.composition-list {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #004080;
-}
+/* --- End of EACC Section --- */
 
 /* Carousel Home Section */
 .carousel-container {
     position: relative;
-    width: 100%; 
-    height: 50vh;
+    width: 100%;
+    height: 60vh;
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -221,13 +243,15 @@ html {
     height: 100%;
     background-size: cover;
     background-position: center;
-    transition: opacity 1s ease-in-out;
-    display: none;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: scale(0.95);
+    opacity: 0;
 }
 
 .carousel-slide.active {
     display: block;
     opacity: 1;
+    transform: scale(1);
 }
 
 .carousel-content {
@@ -263,6 +287,10 @@ html {
     background-color: #80dfff;
 }
 
+.carousel-container + section {
+    margin-top: 0;
+}
+
 .carousel-control {
     position: absolute;
     top: 50%;
@@ -285,11 +313,33 @@ html {
 
 /* Footer */
 footer {
-    background-color: #004080;
+    background: linear-gradient(45deg, #003366, #0066ccw);
     color: white;
     text-align: center;
     padding: 1rem 0;
     width: 100%;
     position: relative;
     bottom: 0;
+}
+
+/* Scroll Progress Indicator */
+#progress-container {
+    position: fixed;
+    width: 100%;
+    height: 5px;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+#progress-bar {
+    height: 5px;
+    background: #80dfff;
+    width: 0;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
 }
