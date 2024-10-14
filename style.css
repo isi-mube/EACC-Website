@@ -15,16 +15,16 @@ html, body {
 /* Header and Navigation */
 .main-header {
     background: linear-gradient(45deg, #003366, #0066cc);
-    padding: 1.5rem 0;
+    padding: 1rem 0; 
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .logo-container img {
-    max-width: 450px;
+    max-width: 500px;
     height: auto;
     margin-bottom: 0.5rem;
 }
@@ -33,7 +33,7 @@ html, body {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
     padding: 0;
     margin: 0;
 }
@@ -42,7 +42,7 @@ html, body {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding: 0.5rem 1rem;
     position: relative;
     transition: color 0.3s ease, transform 0.3s ease;
@@ -50,7 +50,7 @@ html, body {
 
 .main-nav ul li a:hover {
     color: #80dfff;
-    transform: scale(1.05);
+    transform: translateY(-3px); 
 }
 
 /* Underline animation on hover */
@@ -62,7 +62,7 @@ html, body {
     background-color: #80dfff;
     left: 50%;
     bottom: -5px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .main-nav ul li a:hover::after {
@@ -93,16 +93,6 @@ html, body {
         left: 0;
         width: 100%;
     }
-
-@media (max-width: 768px) {
-    .carousel-content h2 {
-        font-size: 2em;
-    }
-    
-    .carousel-content p {
-        font-size: 1.2em;
-    }
-}
 
     .main-nav ul.show {
         display: flex;
@@ -157,8 +147,8 @@ section {
 .committee-structure {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: space-between;
+    gap: 1.5rem;
+    justify-content: space-evenly;
     align-items: stretch;
 }
 
@@ -174,7 +164,8 @@ section {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
     text-align: center;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     flex: 1;
 }
 
@@ -227,11 +218,22 @@ section {
 
 /* --- End of EACC Section --- */
 
-/* Carousel Home Section */
+/* --- Regulations Section --- */
+.intro-container-regulations {
+    background-color: #e6f2ff;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- End of EACC Section --- */
+
+/* Updated Carousel */
 .carousel-container {
     position: relative;
     width: 100%;
-    height: 60vh;
+    height: 50vh; 
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -244,24 +246,24 @@ section {
     background-size: cover;
     background-position: center;
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-    transform: scale(0.95);
     opacity: 0;
 }
 
 .carousel-slide.active {
-    display: block;
     opacity: 1;
     transform: scale(1);
 }
 
 .carousel-content {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 10%; /* Adjusted for better centering */
+    left: 50%;
+    transform: translateX(-50%);
     color: white;
     background: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 8px;
+    text-align: center;
 }
 
 .carousel-content h2 {
@@ -313,7 +315,7 @@ section {
 
 /* Footer */
 footer {
-    background: linear-gradient(45deg, #003366, #0066ccw);
+    background: linear-gradient(45deg, #003366, #0066cc);
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -342,4 +344,42 @@ footer {
 /* Smooth scrolling for anchor links */
 html {
     scroll-behavior: smooth;
+}
+
+/* Mobile Responsiveness (Refined) */
+@media (max-width: 768px) {
+    .committee-structure {
+        flex-direction: column;
+        gap: 1rem; /* Reduced gap for better stacking */
+        align-items: center;
+    }
+
+    .committee-member {
+        width: 90%; /* Slight padding on the sides to avoid edge clipping */
+        max-width: 100%; /* Make full width on mobile */
+    }
+}
+
+/* Tablet Responsiveness */
+@media (max-width: 1024px) {
+    .committee-structure {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .committee-member {
+        width: calc(50% - 1.5rem); /* Two members per row on tablet */
+    }
+}
+
+/* Larger Screen Responsiveness */
+@media (min-width: 1025px) {
+    .committee-structure {
+        justify-content: space-between; /* Better alignment on large screens */
+    }
+
+    .committee-member {
+        width: calc(33.33% - 1.5rem); /* Three members per row for large screens */
+    }
 }
