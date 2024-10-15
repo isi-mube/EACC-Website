@@ -109,16 +109,13 @@ html, body {
 
 /* Main content sections */
 main {
-    padding: 2rem;
     flex: 1;
 }
 
 section {
-    padding: 50px;
     min-height: 100vh;
     background-color: transparent;
     margin: 0 auto;
-    width: 80%;
 }
 
 /* --- EACC Section --- */
@@ -154,6 +151,7 @@ section {
 
 .committee-structure .first-row, .second-row, .third-row, .fourth-row, .fifth-row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
 }
@@ -167,6 +165,7 @@ section {
     width: 100%;
     max-width: 300px;
     flex: 1;
+    margin: 10px;
 }
 
 .committee-member figure {
@@ -303,6 +302,7 @@ section {
     font-size: 2rem;
     cursor: pointer;
     padding: 10px;
+    z-index: 1;
 }
 
 .carousel-control.prev {
