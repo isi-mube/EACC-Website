@@ -8,7 +8,7 @@ A prototype website for the **European Advisory Committee of Cytotechnology (EAC
 
 ## Purpose of the Website
 
-In Europe, there are about 4000 Cytotechnologists. Without their constant and dedicated work, the fight against cervical cancer would be impossible. 
+In Europe, there are about 4,000 Cytotechnologists. Without their constant and dedicated work, the fight against cervical cancer would be impossible. 
 
 The goal of this website is to increase communication and collaboration among cytotechnological delegates from all countries in Europe, under the auspices of the **European Federation of Cytology Societies (EFCS)**.
 
